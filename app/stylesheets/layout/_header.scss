@@ -1,0 +1,97 @@
+
+
+////////////////////////////////////////
+//             Menu Burger
+////////////////////////////////////////
+
+.header_nav{
+  margin-top: 2em;
+}
+
+.menu_burger{
+  width: 42px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  background-color: white;
+  }
+  .menu_burger span{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.5s ease-in-out;
+  }
+  .menu_burger span::before, .menu_burger span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    transition: transform 0.5s ease-in-out;
+  }
+    .menu_burger span::before{
+      transform: translateY(-10px);
+    }
+    .menu_burger span::after{
+      transform: translateY(10px);
+    }
+
+/* Transformation CSS activation Javascript */
+
+.menu_burger.activeburger span{
+  background-color: transparent;
+}
+.menu_burger.activeburger span::before{
+  transform: translateY(0px) rotateZ(45deg);
+}
+.menu_burger.activeburger span::after{
+  transform: translateY(0px) rotateZ(-45deg);
+}
+
+////////////////////////////////////////
+//          Menu Sous Burger
+////////////////////////////////////////
+
+
+
+  .menu {
+     text-align:center;
+     width:100%;
+     margin-top:18px;
+     list-style: none;
+     padding: 0;
+     // background:gray;
+
+
+    li {
+     display:none;
+     width:100%;
+     padding:0;
+     margin:0;
+
+         :hover {
+           background:lighten(gray ,5% );
+
+          }
+      a {
+        display:table;
+        color: black;
+        width:50%;
+        margin: 0 auto;
+        font-size:20px;
+        padding:20px;
+        overflow:hidden;
+        transition: 0.3s ease-in-out;
+        // border-bottom:thin solid #555;
+        &:hover{
+          text-decoration: none;
+          color:blue;
+        }
+      }
+    }
+  }
